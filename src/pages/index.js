@@ -15,12 +15,14 @@ const ArtistsPage = () => {
 		navigate(`/${artistId}`)
 	}
 
-	return <>
-	<h1>Welcome to our Artists Page!</h1>
-	<br />
-	<Nickelback />
+	return (
+    <>
+        <h1>Welcome to our Artists Page!</h1>
+        <br />
+        <Nickelback />
 
 	</>
+    )
 }
 
 export default AlbumsPage;

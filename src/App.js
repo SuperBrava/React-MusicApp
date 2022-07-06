@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { Routes, Route } from "react-router-dom";
 import './App.css';
-import {Album1, Album2, Album3, Album4} from './pages/AlbumPage/Nickelback';
+import {IndexPage, ArtistPage, ArtistsPage, AlbumPage} from './pages/';
+import {AlbumProvider} from './components/ArtistContext'
 
 import Layout from "./layouts";
 // import { TodoList, TodoForm } from './components';
@@ -12,8 +13,7 @@ function App() {
   // const [todos, setTodos] = useState([]);
 
   return (
-  
-    //Note: Check ending /> vs > for wrapping Routes
+  <AlbumProvider>
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<IndexPage />} />
@@ -23,6 +23,9 @@ function App() {
         </Route>
       </Route>
     </Routes>
+
+
+    </AlbumProvider>
     
     // <div className="App">
     //   <header role="header">
