@@ -1,13 +1,59 @@
-import React, {useContext, useState} from "react";
-import Albums from "../AlbumItem";
-import {ArtistContext} from '../ArtistContext';
+import React, { useContext } from "react";
+import Album from "../AlbumItem";
+import { AlbumContext } from '../ArtistContext';
 
-export default ArtistList() {
-	const [albums, setAlbums] = useContext(ArtistContext);
-
+function ArtistList() {
+	const [albums, setAlbums] = useContext(AlbumContext);
+	// console.log(albums);
+	// console.log(albums[0].Tracks)
+		
 	return(
-		<>
+		<div className="nickelback-albums">
+			{/* {albums.map(album => (
+				<Album />
+			))}; */}
+			<div className="album1">
+				<img src={albums[0].img} alt="" width="350px"/>
+				<h1>{albums[0].title}</h1>
 
-		</>
+				<ul>
+				{albums[0].Tracks.forEach(track => {
+				console.log(<li>{track}</li>)
+				})}
+				</ul>
+			</div>
+			<div className="album2">
+				<img src={albums[1].img} alt="" width="350px"/>
+				<h1>{albums[1].title}</h1>
+
+				<ul>
+				{albums[1].Tracks.forEach(track => {
+				console.log(<li>{track}</li>)
+				})}
+				</ul>
+			</div>
+			<div className="album3">
+				<img src={albums[2].img} alt="" width="350px"/>
+				<h1>{albums[2].title}</h1>
+
+				<ul>
+				{albums[2].Tracks.forEach(track => {
+				console.log(<li>{track}</li>)
+				})}
+				</ul>
+			</div>
+			<div className="album4">
+				<img src={albums[3].img} alt="" width="350px"/>
+				<h1>{albums[3].title}</h1>
+
+				<ul>
+				{albums[3].Tracks.forEach(track => {
+				console.log(<li>{track}</li>)
+				})}
+				</ul>
+			</div>
+		</div>
 	);
 };
+
+export default ArtistList;

@@ -150,3 +150,8 @@ select {
   transform: scale(1.5);
 }
 */
+
+.nickelback-albums {
+    display: flex;
+    flex-direction: row;
+}
