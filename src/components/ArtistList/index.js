@@ -17,8 +17,9 @@ function ArtistList() {
 				<h1>{albums[0].title}</h1>
 
 				<ul>
-				{albums[0].Tracks.forEach(track => {
-				console.log(<li>{track}</li>)
+				{albums[0].Tracks.map(track => {
+						console.log(track);
+						return <li>{track}</li>
 				})}
 				</ul>
 			</div>
@@ -27,8 +28,9 @@ function ArtistList() {
 				<h1>{albums[1].title}</h1>
 
 				<ul>
-				{albums[1].Tracks.forEach(track => {
-				console.log(<li>{track}</li>)
+				{albums[1].Tracks.map(track => {
+						console.log(track);
+						return <li>{track}</li>
 				})}
 				</ul>
 			</div>
@@ -37,8 +39,9 @@ function ArtistList() {
 				<h1>{albums[2].title}</h1>
 
 				<ul>
-				{albums[2].Tracks.forEach(track => {
-				console.log(<li>{track}</li>)
+				{albums[2].Tracks.map(track => {
+						console.log(track);
+						return <li>{track}</li>
 				})}
 				</ul>
 			</div>
@@ -47,8 +50,9 @@ function ArtistList() {
 				<h1>{albums[3].title}</h1>
 
 				<ul>
-				{albums[3].Tracks.forEach(track => {
-				console.log(<li>{track}</li>)
+				{albums[3].Tracks.map(track => {
+						console.log(track);
+						return <li>{track}</li>
 				})}
 				</ul>
 			</div>
